@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Create User</title>
+</head>
+
+<body>
+    <div id="app">
+        &nbsp;
+        <div style="text-align:center;">
+            <br>
+            <h1>Sign Up Form</h1>
+             
+            <label for="email"><b>Email</b></label>
+            <br>
+            <input id="email" v-model="username" placeholder="Enter E-mail" type="text">
+            <br>
+            <label for="password"><b>Password</b></label>
+            <br>
+            <input id="password" v-model="password" type="password" placeholder="Enter Password">
+            <br>
+            <label for="confirmPassword"><b>Confirm Password</b></label>
+            <br>
+            <input id="confirmPassword" v-model="confirmPassword" type="password" placeholder="Confirm Password">
+            <br>
+
+            <div v-if="errorMessage">
+                <p>{{errorMessage}}</p>
+            </div>
+            <button type="submit" v-on:click="signUpUser" class="btn btn-success">Sign up</button>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html> 
